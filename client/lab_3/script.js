@@ -7,7 +7,7 @@
 */
 /* eslint-enable max-len */
 // set our first slide's position to "0", the opening position in an array
-const slidePosition = 0;
+let slidePosition = 0;
 
 // gather a reference to every slide we're using via the class name and querySelectorAll
 const slides = document.querySelectorAll('.carousel_item');
@@ -19,6 +19,14 @@ const slidesArray = Array.from(slides);
 const totalSlides = slidesArray.length;
 
 function updateSlidePosition() {
+  slidesArray.forEach(slide => {
+    slide.classList.remove('visible');
+    slide.classList.add('hidden');
+
+  })
+  slides[slidePosition].classList.add('visible');
+
+
   // Using the .forEach array method, (array.forEach((element) => { per-element work goes here }))
   // loop through all the slides in your slideArray
   // and remove the 'visible' class from each classList
@@ -60,3 +68,8 @@ document.querySelector('.next') // Get the appropriate element (<button class="n
 
 // Paying close attention to the above queryselector, write one that fires
 // when you want a "prev" slide
+document.querySelector('.prev')
+  .addEventListener('click', () => {
+    console.log('clicked prev');
+    moveToPrevSlide();
+  })
