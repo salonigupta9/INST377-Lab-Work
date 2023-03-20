@@ -7,7 +7,6 @@
 
     Try placing it at the same level in your element tree as your Submit button
 -->
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -37,9 +36,10 @@
         </div>
         <div class="right_section box">
           <h2>Local Restaurant List</h2>
-          <div class="box" id="restaurant_list">
+          <ol class="box" id="restaurant_list">
             A list of restaurants from an API
-          </div>
+          </ol>
+          <div class ="lds-ellipsis" id = "data_load_animation"></div>
         </div>
       </div>
       <footer class="footer">
