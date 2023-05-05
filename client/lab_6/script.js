@@ -14,7 +14,7 @@ function injectHTML(list) {
   })
 }
 
-/* A quick filter that will return something based on a matching input */
+
 function filterList(list, query) {
 
   return list.filter( (item) => {
